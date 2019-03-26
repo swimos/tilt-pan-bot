@@ -1,4 +1,4 @@
-# Swim ML Example
+# Swim Tilt/Pan Bot Example
 
 ## Overview
 This example aims to demonstrate how to create an appication made up of many distrubted individual processes which enable disparate processes to share data in real time and act upon that data. Swim eliminates the need to get down and dirty with databases, message queues, or data replication as it handles all that for you and does it in a way which makes the resulting data highly sharable between processe, be it on the local device or in the cloud. This way more time can be spent writing things to act upon the data instead of spending time maintaining and shuffling data around.
