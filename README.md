@@ -1,7 +1,7 @@
 # Swim Tilt/Pan Bot Example
 
 ## Overview
-This project demonstrates how to create an application made up of many distrusted individual processes which enable disparate processes to share data in real time and act upon that data. Swim eliminates the need to get down and dirty with databases, message queues, or data replication as it handles all that for you and does it in a way which makes the resulting data highly shareable between processes, be it on the local device or in the cloud. This way more time can be spent writing things to act upon the data instead of spending time maintaining and shuffling data around.
+This project demonstrates how to create an application made up of many distributed individual processes which enable disparate processes to share data in real time and act upon that data. Swim eliminates the need to get down and dirty with databases, message queues, or data replication as it handles all that for you and does it in a way which makes the resulting data highly shareable between processes, be it on the local device or in the cloud. This way more time can be spent writing things to act upon the data instead of spending time maintaining and shuffling data around.
 
 This example uses Swim services and web agents on the server. The web agents are what store and stream all of the various values and data which drives the application. 
 
