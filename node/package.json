@@ -1,0 +1,25 @@
+{
+  "name": "swim-face-detect",
+  "version": "1.0.0",
+  "description": "Example app demonstrating ML with Swim",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js"
+  },
+  "keywords": [
+    "swim",
+    "real",
+    "time",
+    "iot"
+  ],
+  "author": "Swim.ai",
+  "license": "ISC",
+  "dependencies": {
+    "@swim/client": "3.9.0",
+    "@swim/core": "3.9.0",
+    "@swim/ui": "3.9.0",
+    "@swim/ux": "3.9.0",
+    "dualshock-controller": "^1.1.1",
+    "node-hid": "^0.7.7"
+  }
+}

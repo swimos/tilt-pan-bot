@@ -1,0 +1,123 @@
+/* ===============================
+  Color
+  ============================= */
+$color1: #aaa // gray
+$color2: #00A6ED
+
+.material-icons
+  font-size: 20px
+  cursor: pointer
+
+/* ===============================
+  Box
+  ============================= */
+.main
+  display: flex
+  flex-grow: 1
+  flex-direction: row
+  height: calc(100vh - 64px)
+  min-height: 300px
+
+  .main-nav, .chat-box
+    // border: 1px solid #f0f
+
+  $sideNavSize: 250px
+  .main-nav
+    width: $sideNavSize
+    border-right: 1px solid #ccc
+    background: #efefef
+
+  .chat-box
+    position: relative
+    width: calc(100% - #{$sideNavSize})
+    padding-top: 15px
+
+
+/* ===============================
+  Aside Nav
+  ============================= */
+.main-nav
+  nav
+    padding-left: 15px
+    padding-right: 15px
+    height: calc(100% - 24px - 30px)
+    overflow: hidden
+    overflow-y: auto
+
+    li
+      display: flex
+      padding: 5px 0
+
+      .settings
+        display: none
+        height: 20px
+        margin-left: auto
+        margin-right: 0
+
+      &:hover
+        background: #aaa
+      &:hover .settings
+        display: block
+
+  .header
+    padding-top: 10px
+    padding-bottom: 10px
+    border-bottom: 1px solid #aaa
+
+    .col
+      display: flex
+
+      &:nth-child(2)
+        justify-content: flex-end
+
+        i
+          margin-right: 5px
+
+
+/* ===============================
+  Chat Box
+  ============================= */
+
+.input-wrap
+  position: absolute
+  left: 0
+  bottom: 0
+  width: 100%
+
+  input
+    width: 100%
+    padding: 10px 15px
+    border: 0
+    border-top: 1px solid #ccc
+
+  button
+    position: absolute
+    display: flex
+    top: 0
+    right: 0
+    height: 100%
+    border: 0
+    background: transparent
+    outline: none
+
+  .btn-code
+    right: 40px
+
+.msg-list
+  li
+    display: flex
+
+  $circleSize: 30px
+  .circle
+    display: flex
+    align-items: center
+    justify-content: center
+    width: $circleSize
+    height: $circleSize
+    font-weight: bold
+    padding-bottom: 3px
+    border-radius: $circleSize/2
+    border: 1px solid #f0f
+    overflow: hidden
+    color: $white
+    background: #f0f

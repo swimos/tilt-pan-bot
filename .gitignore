@@ -1,0 +1,19 @@
+.DS_Store
+*.DS_Store
+.vscode
+.idea
+dist
+doc
+node_modules
+node/node_modules
+package-lock.json
+yarn.lock
+
+# Ignore all folder that name match list
+build
+out
+
+# Ignore all extensions that name match list
+.gradle
+.idea
+*.iml

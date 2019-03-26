@@ -1,0 +1,421 @@
+/* ===============================
+ * Global style
+ * ============================= */
+html, body {
+  padding: 0;
+  margin: 0;
+  font-size: 15px;
+  font-weight: normal;
+  line-height: 1.4em;
+  font-family: Orbitron, "Open Sans", sans-serif;
+  -webkit-tap-highlight-color: transparent;
+  color: white;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: auto;
+  background-color: #040e19;  
+}
+
+a, a:visited, a:focus {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+p {
+  margin-bottom: 1.5rem;
+}
+
+h1, .h1 {
+  font-size: 48px;
+  font-weight: normal;
+}
+
+h2, .h2 {
+  font-size: 36px;
+  font-weight: normal;
+}
+
+h3, .h3 {
+  font-size: 24px;
+  font-weight: normal;
+}
+
+h4, .h4 {
+  font-size: 20px;
+  font-weight: normal;
+}
+
+h5, .h5 {
+  font-size: 15px;
+  font-weight: normal;
+}
+
+h6, .h6 {
+  font-size: 13px;
+  font-weight: normal;
+}
+
+h1, .h1 {
+  line-height: 1.188;
+}
+
+h2, .h2 {
+  line-height: 1.2;
+}
+
+h3, .h3 {
+  line-height: 1.222;
+}
+
+h4, .h4 {
+  font-weight: lighter;
+  line-height: 1.2;
+}
+
+h6, .h6 {
+  line-height: 1.23;
+}
+
+/* ===============================
+ * Bootstrap override
+ * ============================= */
+/* ===============================
+ * Main Header
+ * ============================= */
+.main-header {
+  position: relative;
+  z-index: 10;
+  height: 64px;
+  background: #070707;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.4);
+  color: #fff;
+}
+.main-header .main-title {
+  display: flex;
+}
+.main-header .row {
+  height: 100%;
+}
+.main-header .content-left,
+.main-header .content-right {
+  display: flex;
+}
+.main-header .content-left a,
+.main-header .content-left picture,
+.main-header .content-right a,
+.main-header .content-right picture {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+.main-header .btn-plant-back {
+  margin-right: 10px;
+}
+.main-header .content-right {
+  margin-top: 15px;
+  margin-bottom: 12px;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.main-header .content-right picture {
+  padding-left: 15px;
+}
+.main-header h1 {
+  align-self: center;
+  font-size: 20px;
+  margin: 0 0 0 15px;
+  font-weight: normal;
+  letter-spacing: 1px;
+}
+.main-header .timer {
+  align-self: flex-end;
+  font-size: 13px;
+  line-height: 1.2;
+}
+
+/* ===============================
+ * Global
+ * ============================= */
+.ul-no-style {
+  margin: 0;
+  padding: 0;
+}
+.ul-no-style li {
+  list-style: none;
+}
+
+/* ===============================
+ * Color
+ * ============================= */
+.material-icons {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* ===============================
+ * Box
+ * ============================= */
+.main {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: row;
+  height: calc(100vh - 64px);
+  min-height: 300px;
+}
+.main .main-nav {
+  width: 250px;
+  border-right: 1px solid rgba(255,255,255,0.25);
+  background: rgba(255,255,255,0.2);
+  color: white;
+}
+.main .chat-box {
+  position: relative;
+  width: calc(100% - 270px);
+}
+
+/* ===============================
+ * Aside Nav
+ * ============================= */
+.main-nav nav {
+  padding-left: 15px;
+  padding-right: 15px;
+  height: calc(100% - 24px - 30px);
+  overflow: hidden;
+  overflow-y: auto;
+}
+.main-nav nav li {
+  display: flex;
+  padding: 5px 0;
+}
+.main-nav nav li .settings {
+  display: none;
+  height: 20px;
+  margin-left: auto;
+  margin-right: 0;
+}
+.main-nav nav li:hover {
+  background: #aaa;
+}
+.main-nav nav li:hover .settings {
+  display: block;
+}
+.main-nav .header {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255,255,255,0.0.1);
+}
+.main-nav .header .col {
+  display: flex;
+}
+.main-nav .header .col:nth-child(2) {
+  justify-content: flex-end;
+}
+.main-nav .header .col:nth-child(2) i {
+  margin-right: 5px;
+}
+
+/* ===============================
+ * Chat Box
+ * ============================= */
+.input-wrap {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+.input-wrap input {
+  width: 100%;
+  padding: 10px 15px;
+  border: 0;
+  border-top: 1px solid #ccc;
+}
+.input-wrap button {
+  position: absolute;
+  display: flex;
+  top: 0;
+  right: 0;
+  height: 100%;
+  border: 0;
+  background: transparent;
+  outline: none;
+}
+.input-wrap .btn-code {
+  right: 40px;
+}
+
+.msg-list li {
+  display: flex;
+}
+.msg-list .circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  font-weight: bold;
+  padding-bottom: 3px;
+  border-radius: 15px;
+  border: 1px solid #f0f;
+  overflow: hidden;
+  color: #fff;
+  background: #f0f;
+}
+
+#cameraWrapper {
+  overflow: hidden;
+}
+
+#cameraWrapper, #chartsWrapper {
+  width: 1280px;
+  margin: 5px auto;
+  display: flex;
+  position: relative;
+}
+
+#contentWrapper {
+  width: 100%;
+  position: relative;
+}
+
+#cameraCanvas {
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+}
+
+.chartBox {
+  width: calc(100% / 4);
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 5px;
+  overflow: hidden;
+  margin: 5px 5px 0px 0px;
+  background-color: rgba(0,0,0,0.75);
+}
+
+.chartBox h3 {
+  background-color: rgba(255,0,0,0.75);
+  color: white;
+  font-size: 12px;
+  text-align: right;
+  width: 100%;
+  height: 20px;
+  padding: 3px;
+  transition: all 500ms linear;
+}
+
+.chart {
+  width: calc(100% * 0.75);
+  height: 100px;
+}
+
+.chart div {
+  width: 100%;
+}
+
+.stat {
+  width: calc(100% * 0.25);
+  height: 100px;
+  line-height: 100px;
+  color: #ff0000;
+  font-size: 27px;
+  text-align: center;
+  background-color: #070707;
+  transition: color 500ms linear;
+}
+
+#cameraMenu {
+  position: absolute;
+  transition: all 100ms linear;
+  overflow: hidden;
+  right: 0px;
+}
+
+.open {
+  width: 200px;
+  height: 420px;
+  /* background-color: rgba(0, 72, 104, 0.75);
+  border-left: solid 1px rgba(70, 199, 255, 0.5);
+  border-bottom: solid 1px rgba(70, 199, 255, 0.5);
+  box-shadow: 0px 0px 13px 13px rgba(70, 199, 255, 0.15); */
+  background-color: rgba(255, 255 ,255, 0.5);
+  border-left: solid 1px rgba(255, 255, 255, 0.25);
+  border-bottom: solid 1px rgba(255, 255, 255, 0.25);
+  box-shadow: 0px 0px 10px 3px rgba(255, 255, 255, 0.2);
+  border-radius: 0px 0px 0px 10px;
+}
+
+.closed {
+  width: 32px;
+  height: 32px;
+  background-color: rgba(0, 72, 104, 0.0);
+  border-right: solid 1px rgba(70, 199, 255, 0);
+  box-shadow: 0px 0px 13px 13px rgba(0, 0, 0, 0);
+  border-radius: 0px 0px 0px 0px;
+}
+
+#camMenuItems {
+  position: absolute;
+  width: 200px;
+  height: 420px;
+  
+}
+
+#menuButton {
+  width: 30px;
+  height: 100%;
+  /* background-color: rgba(255,255,255,0.25); */
+}
+
+#menuButton:hover svg {
+  fill: rgba(255,255,255,0.85);
+}
+#menuButton svg {
+  fill: rgba(255,255,255,0.25);
+  transition: all 100ms linear;
+}
+
+.open #camMenuItems h3 {
+  background-color: rgba(255,255,255,0.25);
+}
+
+#camMenuItems h3 {
+  background-color: rgba(255,255,255,0);
+  color: rgba(255,255,255,0.5);
+  text-shadow: 0px 0px 2px rgba(255,255,255,0.5);
+  margin: 0px;
+  padding: 0px;
+  transition: all 150ms linear;
+}
+
+#cameraMenu:hover h3 {
+  color: rgba(255,255,255,1);
+  text-shadow: 0px 0px 2px rgba(255,255,255,0);
+}
+
+.open #camMenuBG {
+  filter: blur(5px);
+}
+
+#camMenuBG {
+  width: 100%;
+  height: 100%;
+  background-size: 1280px 720px;
+  background-position-x: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  filter: blur(0px);
+}
+
+.menuRow {
+  padding: 5px 8px;
+}
+

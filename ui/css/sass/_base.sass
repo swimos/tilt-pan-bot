@@ -1,0 +1,119 @@
+// Global variable
+$white: #fff
+$black: #000
+$gray1: #f6f6f6
+
+/* ===============================
+  Global style
+  ============================= */
+html, body
+  padding: 0
+  margin: 0
+  font-size: 15px
+  font-weight: normal
+  line-height: 1.4em
+  font-family: 'Open Sans', sans-serif
+  -webkit-tap-highlight-color: transparent
+
+
+a, a:visited, a:focus
+  color: white
+  text-decoration: none
+
+a:hover
+  text-decoration: underline
+
+p
+  margin-bottom: 1.5rem
+
+
+// Header
+$header_font_size_px: 48px 36px 24px 20px 15px 13px
+@for $i from 1 to length($header_font_size_px)+1
+  h#{$i}, .h#{$i}
+    font-size: nth($header_font_size_px, $i)
+    font-weight: normal
+
+h1, .h1
+  line-height: 1.188
+
+h2, .h2
+  line-height: 1.2
+
+h3, .h3
+  line-height: 1.222
+
+h4, .h4
+  font-weight: lighter
+  line-height: 1.2
+
+h6, .h6
+  line-height: 1.23
+
+/* ===============================
+  Bootstrap override
+  ============================= */
+.container
+  // max-width: 1440px
+
+/* ===============================
+  Main Header
+  ============================= */
+.main-header
+  position: relative
+  z-index: 10
+  height: 64px
+  background: #354248
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.4)
+  color: $white
+
+  .main-title
+    display: flex
+
+  .row
+    height: 100%
+
+  .content-left,
+  .content-right
+    display: flex
+
+    a,
+    picture
+      display: flex
+      height: 100%
+      align-items: center
+
+  .btn-plant-back
+    margin-right: 10px
+
+  .content-right
+    margin-top: 15px
+    margin-bottom: 12px
+    justify-content: flex-end
+    align-items: flex-end
+
+    picture
+      padding-left: 15px
+
+  h1
+    align-self: center
+    font-size: 20px
+    margin: 0 0 0 15px
+    font-weight: normal
+    letter-spacing: 1px
+
+  .timer
+    align-self: flex-end
+    font-size: 13px
+    line-height: 1.2
+
+/* ===============================
+  Global
+  ============================= */
+
+.ul-no-style
+  margin: 0
+  padding: 0
+
+  li
+    list-style: none
