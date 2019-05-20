@@ -2,21 +2,20 @@ FROM openjdk:11-jdk-stretch
 
 WORKDIR /
 
-COPY /config/java/. /greenhouse/config/java/.
-COPY /java/. /greenhouse/java/.
-COPY /java/gradle/wrapper/. /greenhouse/java/gradle/wrapper/.
-COPY /java/src/main/java/. /greenhouse/java/src/main/java/.
-COPY /java/src/main/java/ai/swim/. /greenhouse/java/src/main/java/ai/swim/.
-COPY /java/src/main/java/ai/swim/util/. /greenhouse/java/src/main/java/ai/swim/util/.
-COPY /java/src/main/java/ai/swim/service/. /greenhouse/java/src/main/java/ai/swim/service/.
-COPY /java/src/main/resources/. /greenhouse/java/src/main/resources/.
+COPY /server/. /tilt-pan-bot/server/.
+COPY /server/gradle/wrapper/. /tilt-pan-bot/server/gradle/wrapper/.
+COPY /server/src/main/java/. /tilt-pan-bot/server/src/main/java/.
+COPY /server/src/main/java/swim/. /tilt-pan-bot/server/src/main/java/swim/.
+COPY /server/src/main/java/swim/facedetect/. /tilt-pan-bot/server/src/main/java/swim/facedetect/.
+COPY /server/src/main/java/swim/facedetect/agent/. /tilt-pan-bot/server/src/main/java/swim/facedetect/agent/.
+COPY /server/src/main/java/swim/facedetect/introspection/. /tilt-pan-bot/server/src/main/java/swim/facedetect/introspection/.
 
-WORKDIR /greenhouse/java/
+WORKDIR /tilt-pan-bot/server/
 
 RUN /bin/bash -c './gradlew build'
 RUN /bin/bash -c 'mkdir dist'
-RUN /bin/bash -c 'tar -xf build/distributions/java-1.0.tar -C dist/'
+RUN /bin/bash -c 'tar -xf build/distributions/swim-face-detect-3.9.1.tar -C dist/'
 
-ENTRYPOINT ["./dist/java-1.0/bin/java"]
+ENTRYPOINT ["./dist/swim-face-detect-3.9.1/bin/swim-face-detect"]
 
-EXPOSE 5620
+EXPOSE 9001

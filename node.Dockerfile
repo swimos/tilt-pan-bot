@@ -30,7 +30,7 @@ RUN apt-get update -y && \
 RUN pip3 install --upgrade pip
 RUN pip3 install --upgrade setuptools
 RUN pip3 install websocket-client
-RUN pip3 install sense-hat
+# RUN pip3 install sense-hat
 RUN /bin/bash -c 'npm install -g node-gyp --unsafe-perm'
 RUN /bin/bash -c 'npm install -g serialport --unsafe-perm'
 
@@ -38,25 +38,20 @@ RUN /bin/bash -c 'npm install -g serialport --unsafe-perm'
 
 # WORKDIR /RTIMU/Linux/python/
 
-RUN git clone https://github.com/RPi-Distro/RTIMULib/ && \
-    cd RTIMULib/Linux/python/ && \
-    python3 setup.py build && \
-    python3 setup.py install
+# RUN git clone https://github.com/RPi-Distro/RTIMULib/ && \
+#     cd RTIMULib/Linux/python/ && \
+#     python3 setup.py build && \
+#     python3 setup.py install
 
 WORKDIR /
 
-COPY /bin/. /greenhouse/bin/.
-COPY /config/node/. /greenhouse/config/node/.
-COPY /hardware/. /greenhouse/hardware/.
-COPY /javascript/. /greenhouse/javascript/.
-COPY /javascript/bots/. /greenhouse/javascript/bots/.
-COPY /javascript/modules/. /greenhouse/javascript/modules/.
-COPY /javascript/services/. /greenhouse/javascript/services/.
-COPY /javascript/httpServer/. /greenhouse/javascript/httpServer/.
-COPY /javascript/httpServer/views/. /greenhouse/javascript/httpServer/views/.
-COPY /javascript/httpServer/views/layouts/. /greenhouse/javascript/httpServer/views/layouts/
+COPY /config/node/. /tilt-pan-bot/config/node/.
+COPY /node/. /tilt-pan-bot/node/.
+COPY /node/lib/. /tilt-pan-bot/node/lib/.
+COPY /python-ml/. /tilt-pan-bot/python-ml/.
+COPY /tiltPanHat/. /tilt-pan-bot/tiltPanHat/.
 
-WORKDIR /greenhouse/javascript/
+WORKDIR /tilt-pan-bot/node/
 
 RUN /bin/bash -c 'npm install'
 
