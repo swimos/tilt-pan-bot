@@ -1,11 +1,11 @@
 const HttpConfig = {
-	deviceName: 'Local Host',
+	deviceName: 'R23-TP1',
 	httpEnabled: true,
 	btEnabled: false,
 	showDebug: true,
-	hostUrl: '192.168.0.216',
+	hostUrl: '192.168.10.83',
 	hostPort: 8081,
-	swimUrl: '192.168.0.216',
+	swimUrl: '192.168.10.83',
 	swimPort: 9001,
 	circuitExpress: {
 		bot: {
