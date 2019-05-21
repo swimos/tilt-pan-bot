@@ -73,6 +73,9 @@ def readImage(selectedEye, videoUrl, imageQueue):
               "y1": y,
               "x2": x+w,
               "y2": y+h,
+              "centroidX": x+(w/2),
+              "centroidY": y+(h/2),
+              "totalArea": w*h,
               "eyes": []
           }
           eyeList = []
