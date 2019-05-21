@@ -108,7 +108,10 @@ class Main {
       const y1 = face.y1 * scale;
       const x2 = face.x2 * scale;
       const y2 = face.y2 * scale;
+      const centroidX = face.centroidX * scale;
+      const centroidY = face.centroidY * scale;
 
+      this.drawCircle(canvas, centroidX, centroidY, 1, "#004868");
       this.drawBox(canvas, x1, y1, x2, y2, 3, "#004868");
       this.drawLabel(canvas, x1, y1, ((x2 - x1) < 100) ? (x2 - x1) : 100, -20, labelText, "#ffffff", "#004868");
       if (face.eyes.length > 0) {
@@ -132,6 +135,13 @@ class Main {
     canvas.font = "10px Orbitron";
     canvas.fillText(labelText, x1 + 3, y1 - 7);
 
+  }
+
+  drawCircle(canvas, x, y, r = 2, color = "#ff0000") {
+    canvas.strokeStyle = color;
+    canvas.beginPath();
+    canvas.arc(x, y, r, 0, 2 * Math.PI);
+    canvas.stroke();    
   }
 
   drawBox(canvas, x1, y1, x2, y2, size = 1, color = "#ffffff") {
