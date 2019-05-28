@@ -1,7 +1,6 @@
 import multiprocessing
 from multiprocessing import Process, Pipe
-import sys, json, numpy as np
-import board
+import sys, json
 import neopixel
 import random
 import time
