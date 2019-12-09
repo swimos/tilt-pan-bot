@@ -28,4 +28,26 @@ public class RobotStateAgent extends AbstractAgent {
         mood.set(newValue);
       });  
 
+  @SwimLane("tilt")
+    protected ValueLane<Integer> tilt = this.<Integer>valueLane().isTransient(true);
+
+  @SwimLane("setTilt")
+  public CommandLane<Integer> setTilt = this.<Integer>commandLane()
+      .onCommand((Integer newValue) -> {
+        if(newValue != tilt.get()) {
+          tilt.set(newValue);
+        }
+      });        
+
+  @SwimLane("pan")
+  protected ValueLane<Integer> pan = this.<Integer>valueLane().isTransient(true);
+
+  @SwimLane("setPan")
+  public CommandLane<Integer> setPan = this.<Integer>commandLane()
+      .onCommand((Integer newValue) -> {
+        if(newValue != pan.get()) {
+          pan.set(newValue);
+        }
+      });        
+  
 }

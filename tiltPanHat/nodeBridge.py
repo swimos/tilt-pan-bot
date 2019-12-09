@@ -187,6 +187,23 @@ if __name__ == '__main__':
         except:
           print("[nodeBridge] stickY error")
 
+
+      if key == "panTo":
+        try:
+          print(payload["value"])
+          currPan = int(payload["value"])
+          pan(currPan)
+        except:
+          print("pan error")          
+
+      if key == "tiltTo":
+        try:
+          print(payload["value"])
+          currTilt = int(payload["value"])
+          tilt(currTilt)
+        except:
+          print("tilt error")
+
       if key == "pan":
         currPan = payload["value"]
         pan(currPan)

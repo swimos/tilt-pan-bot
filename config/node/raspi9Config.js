@@ -4,7 +4,7 @@ const HttpConfig = {
 	swimUrl: '192.168.1.97',
 	swimPort: 9001,
 	dualshock: {
-		enabled: true,
+		enabled: false,
 		config: 'dualShock3',
 		accelerometerSmoothing : true,
 		analogStickSmoothing : false
